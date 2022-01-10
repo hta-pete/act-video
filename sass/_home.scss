@@ -1,0 +1,345 @@
+// ———————————————————————————————————
+// HERO
+// ——————————————————————————————————— 
+.hero{
+	position:relative;
+	color:white;
+	background:$blue;
+	width:100%;
+	height:calc(100vh - 110px);
+	&:hover{
+		.prev-btn, .next-btn{
+			@include opacity(1);
+		}
+	}
+	.logo-overlay{
+		z-index:2;
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		background:url("../img/act-logo-bg.png") no-repeat center left -200px;
+	  background-size:cover;
+	}
+	.hero_slide{
+		height:100%;
+		&.slick-active{
+			.hero-video{
+				video, img{
+					@include opacity(1);
+				  @include transform(scale(1));
+				}
+			}
+		}
+	}
+	.slick-slider,.slick-list,.slick-track{
+		height:100%;
+	}
+	.hero-copy{
+		z-index:4;
+		position:absolute;
+		left:0;
+		top:0;
+		width:60%;
+		height:100%;
+		text-align:center;
+		&.--full-width{
+			width:100%;
+		}
+		img{
+			display:inline-block !important;
+		}
+		.button-group{
+			margin-top:30px;
+		}
+		h1,h2,p,.button-group, img{
+			display:block;
+			will-change: transform;
+			opacity:0 !important;
+			@for $i from 1 through 10 {
+		    &:nth-child(#{$i}) {
+		    	@include transform(translateY(60px * $i));
+		    	@include transition(transform 1.4s (0.01s * $i) $easeOutExpo, opacity 1.4s (0.01s * $i) $easeOutExpo);
+		    }
+		  }
+		}
+		&.active{
+			h1,h2,p,.button-group, img{
+				opacity:1 !important;
+				@include transform(translateY(0));
+			}
+		}
+	}
+	.hero-video{
+		position:relative;
+		top:0;
+		right:0;
+		margin-left:40%;
+		width:60%;
+		height:100%;
+		background:$blue;
+		overflow:hidden;
+		video, img{
+			display:block;
+			width:100%;
+			height:100%;
+			object-fit: cover;
+			will-change: transform;
+			@include opacity(1);
+			@include opacity(0);
+			@include transform(scale(1.2));
+			@include transition(transform 2s $easeOutExpo);
+		}
+		.overlay{
+			z-index:1;
+			position:absolute;
+			top:0;
+			left:0;
+			width:85%;
+			height:100%;
+			background:linear-gradient(90deg, $blue 0%, rgba(0,0,0,0) 100%);
+		}
+	}
+	.slick-dots{
+		z-index:4;
+		position:absolute;
+		bottom:20px;
+		width:100%;
+		text-align:center;
+		li{
+			display:inline-block;
+			margin:0 6px;
+			button{
+				display:block;
+				width:10px;
+				height:10px;
+				border:1px solid transparent;
+				border-radius:100%;
+				background:white;
+				-webkit-appearance:none;
+				padding:0;
+				font-size:0;
+				text-indent:-999px;
+				overflow:hidden;
+			}
+			&.slick-active{
+				button{
+					width:14px;
+				  height:14px;
+				  background:$orange;
+				  border-color:white;
+				}
+			}
+		}
+	}
+	.prev-btn, .next-btn{
+		z-index:4;
+		position:absolute;
+		text-align:center;
+		top:50%;
+		margin-top:-35px;
+		height:70px;
+		width:30px;
+		background:rgba(10,40,90,0.7);
+		color:white;
+		@include opacity(0);
+		@include transition(all 0.8s $easeOutExpo);
+		i{
+			font-size:1.8rem;
+			line-height:70px;
+		}
+		&:hover{
+			background:rgba(10,40,90,0.9);
+		}
+	}
+	.prev-btn{
+		left:0px;
+		padding-right:5px;
+	}
+	.next-btn{
+		right:0px;
+		padding-left:5px;
+	}
+}
+
+
+// ———————————————————————————————————
+// VIDE OINTRO
+// ———————————————————————————————————
+.career-options{
+	position:relative;
+	.col-2:first-child{
+		background:#ebebeb;
+	}
+	.col-2:last-child{
+		
+	}
+}
+
+.page-menu{
+	.page-menu_wrap-links{
+		a{
+			z-index:0;
+			position:relative;
+			display:block;
+			text-align:left;
+			margin-bottom:5px;
+		}
+	}
+}
+
+
+// ———————————————————————————————————
+// BENEFITS
+// ———————————————————————————————————
+.benefits{
+	position:relative;
+	background:$blue;
+	background-size:auto 100%;
+	background-size:auto 100%;
+	color:white;
+	.benefit{
+		max-width: 400px;
+		padding-bottom:30px;
+		margin-bottom:30px;
+		border-bottom:1px solid rgba(255,255,255,0.25);
+		&:last-child{
+			margin-bottom:0;
+			padding-bottom:0;
+			border-bottom:none;
+		}
+		p{
+			color:rgba(255,255,255,0.8);
+		}
+		a{
+			font-style:italic;
+			color:white;
+			text-decoration:underline;
+			@include transition(color 0.6s $easeOutExpo);
+			&:hover{
+				color:$orange;
+			}
+		}
+		img{
+			display:block;
+			width:100%;
+			max-width:220px;
+			margin-top:5px;
+		}
+	}
+}
+
+// ———————————————————————————————————
+// APPLY CTA
+// ——————————————————————————————————— 
+.apply-cta{
+	background:$blue url("../img/logos/act-logo-bg.png") no-repeat center;
+	background-size:auto 170%;
+	width:100%;
+	color:white;
+	.column{
+		width:auto;
+		&:first-child{
+			margin-right:50px;
+		}
+		&:last-child{
+			margin-left:50px;
+		}
+	}
+	.cta-wrap{
+		padding:140px 0;
+	}
+	.cta-links{
+		margin-top:20px;
+		text-align:center;
+	}
+	a{
+		display:inline-block;
+		font-size:1.6rem;
+	}
+	.outline-btn{
+		font-weight:800;
+		letter-spacing:-0.05em;
+	}
+	.phone-number{
+		display:block;
+		color:white;
+		margin-top:15px;
+		text-align:center;
+		span{
+			font-style:italic;
+		}
+	}
+}
+
+
+// ———————————————————————————————————
+// EQUIPMENT
+// ——————————————————————————————————— 
+.equipment{
+	position:relative;
+	height:60vh;
+	min-height:650px;
+	.equipment_text{
+		z-index:2;
+		position:relative;
+		color:white;
+		text-align:center;
+		p{
+			margin-top:5px;
+			color:rgba(255,255,255,1);
+		}
+	}
+	.equipment_highlights{
+		margin-top:40px;
+		.column{
+			padding:0 25px;
+			border-right:1px solid rgba(255,255,255,0.3);
+			&:last-child{
+				border:none;
+			}
+		}
+	}
+	.equipment_video{
+		z-index:0;
+		position:absolute;
+		top:0;
+		right:0;
+		width:100%;
+		height:100%;
+		overflow:hidden;
+		background:$blue_dark;
+		video, img{
+			display:block;
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			object-fit: cover;
+			object-position:center;
+			@include opacity(0.7);
+		}
+	}
+}
+
+
+// ———————————————————————————————————
+// BEST FLEETS
+// ——————————————————————————————————— 
+.best-fleets{
+	background:white url("../img/tire-tread-bg.png") no-repeat center top;
+	background-size:480px;
+	padding-top:120px;
+	img{
+		max-width:768px;
+		margin:60px auto -130px auto;
+	}
+	p{
+		max-width:550px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	
+}
