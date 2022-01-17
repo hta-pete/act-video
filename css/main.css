@@ -47,11 +47,11 @@ html {
 FONT STYLES
 
 ––––––––––––––––––––––––––––––––––––––––––– */
-[class*="headline_"] {
+[class*=headline_] {
   font-family: "Oswald";
   text-transform: uppercase;
 }
-[class*="headline_"] .--light {
+[class*=headline_] .--light {
   font-family: "Open Sans";
   font-weight: 400;
 }
@@ -90,7 +90,7 @@ FONT STYLES
   letter-spacing: -0.02em;
 }
 
-[class*="heading_"] {
+[class*=heading_] {
   display: block;
   font-weight: 600;
   text-transform: uppercase;
@@ -286,7 +286,7 @@ GRID
 .row-gap {
   gap: 1.5rem;
 }
-.row-gap [class^="col--"], .row-gap [class*=" col--"] {
+.row-gap [class^=col--], .row-gap [class*=" col--"] {
   position: relative;
 }
 
@@ -603,7 +603,7 @@ UTILITY
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1;
@@ -931,9 +931,16 @@ footer .footer_bottom-links a:hover {
 .quick-app {
   max-width: 480px;
   margin: 0 auto 0 auto;
-  padding: 50px;
+  padding: 40px;
   background: white;
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+.quick-app label {
+  display: block;
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 10px;
 }
 .quick-app .flex {
   gap: 15px;
@@ -961,8 +968,9 @@ footer .footer_bottom-links a:hover {
   width: 100%;
   font-size: 1.4rem;
   padding: 1em 1.2em;
-  border: none;
-  background: #f6f6f6;
+  border-radius: 3px;
+  border: 1px solid rgba(75, 85, 120, 0.3);
+  background: transparent;
 }
 .quick-app button {
   border: none;
@@ -988,8 +996,9 @@ footer .footer_bottom-links a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../img/act-logo-bg.png") no-repeat center left -200px;
+  background: url("../img/act-logo-bg.png") no-repeat center;
   background-size: cover;
+  opacity: 0.35;
 }
 .hero .hero_slide {
   height: 100%;
@@ -1264,10 +1273,16 @@ footer .footer_bottom-links a:hover {
 .career-options {
   position: relative;
 }
-.career-options .col-2:first-child {
-  background: #ebebeb;
+
+.quick-app-wrap {
+  padding-right: 30px;
+  padding-left: 30px;
+  background: #f6f6f6;
 }
 
+.page-menu {
+  padding: 120px 0 60px 0;
+}
 .page-menu .page-menu_wrap-links a {
   z-index: 0;
   position: relative;
@@ -1277,6 +1292,7 @@ footer .footer_bottom-links a:hover {
 }
 
 .benefits {
+  padding: 60px 0 120px 0;
   position: relative;
   background: #163b75;
   background-size: auto 100%;

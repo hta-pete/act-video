@@ -328,12 +328,19 @@ footer{
 
 
 .quick-app{
-	max-width:600px;
+	max-width:480px;
 	margin:0 auto 0 auto;
 	padding:40px;
 	background:white;
+	border-radius:6px;
 	box-shadow:0 2px 6px 0 rgba(0,0,0,0.2);
 	//color:white;
+	label{
+		display:block;
+		font-weight:600;
+		font-size:12px;
+		margin-bottom:10px;
+	}
 	.flex{
 		gap:15px;
 	}
@@ -360,8 +367,9 @@ footer{
 		width:100%;
 		font-size:1.4rem;
 		padding:1em 1.2em;
-		border:none;
-		background:#f6f6f6;
+		border-radius:3px;
+		border:1px solid rgba(75,85,120,0.3);
+		background:transparent;
 	}
 	button{
 		border:none;
