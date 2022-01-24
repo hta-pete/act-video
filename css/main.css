@@ -39,7 +39,7 @@ html {
 
 .--sticky {
   position: sticky;
-  top: 120px;
+  top: 60px;
 }
 
 /* ––––––––––––––––––––––––––––––––––––––––––––
@@ -899,7 +899,7 @@ footer .footer_bottom-links a:hover {
 }
 
 .quick-app {
-  max-width: 480px;
+  max-width: 600px;
   margin: 10px auto;
   padding: 40px;
   background: white;
