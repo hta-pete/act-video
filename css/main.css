@@ -673,7 +673,7 @@ header .apply-header a:hover {
 }
 
 footer {
-  padding: 170px 0 90px 0;
+  padding: 120px 0 90px 0;
   background: #f5f4f0;
 }
 footer .column {
@@ -900,7 +900,7 @@ footer .footer_bottom-links a:hover {
 
 .quick-app {
   max-width: 480px;
-  margin: 0 auto 0 auto;
+  margin: 10px auto;
   padding: 40px;
   background: white;
   border-radius: 6px;
@@ -1441,11 +1441,11 @@ footer .footer_bottom-links a:hover {
 .best-fleets {
   background: white url("../img/tire-tread-bg.png") no-repeat center top;
   background-size: 480px;
-  padding-top: 120px;
+  padding-top: 90px;
 }
 .best-fleets img {
   max-width: 768px;
-  margin: 60px auto -130px auto;
+  margin: 60px auto -90px auto;
 }
 .best-fleets p {
   max-width: 550px;
