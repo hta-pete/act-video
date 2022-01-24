@@ -171,9 +171,6 @@
 .career-options{
 	position:relative;
 }
-.career-options_menu{
-	//background:#f6f6f6;
-}
 
 .quick-app-wrap{
 	padding-right:30px;
@@ -309,7 +306,7 @@
 	.equipment_highlights{
 		margin-top:40px;
 		.column{
-			padding:0 25px;
+			padding:0 1.25em;
 			border-right:1px solid rgba(255,255,255,0.3);
 			&:last-child{
 				border:none;

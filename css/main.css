@@ -771,6 +771,7 @@ footer .footer_bottom-links a:hover {
   font-weight: 700;
   letter-spacing: -0.04em;
   text-transform: uppercase;
+  border-radius: 2px;
   -webkit-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
   -moz-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
   -ms-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
@@ -912,7 +913,7 @@ footer .footer_bottom-links a:hover {
   margin-bottom: 10px;
 }
 .quick-app .flex {
-  gap: 15px;
+  gap: 10px;
 }
 .quick-app .fields {
   margin-top: 15px;
@@ -932,14 +933,45 @@ footer .footer_bottom-links a:hover {
 .quick-app p {
   font-size: 1.4rem;
 }
+.quick-app .select {
+  position: relative;
+  width: 100%;
+}
+.quick-app .select:after {
+  content: "\f078";
+  font-family: "FontAwesome";
+  font-size: 10px;
+  color: #626b7c;
+  right: 15px;
+  top: 18px;
+  position: absolute;
+  pointer-events: none;
+}
+.quick-app .select select {
+  display: block;
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 1em 1em;
+  border-radius: 3px;
+  border: 1px solid rgba(75, 85, 120, 0.3);
+  background: transparent;
+  color: #626b7c;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 .quick-app input {
   display: block;
   width: 100%;
   font-size: 1.4rem;
-  padding: 1em 1.2em;
+  padding: 0.8em 1em;
   border-radius: 3px;
   border: 1px solid rgba(75, 85, 120, 0.3);
   background: transparent;
+  color: #1d4485;
+}
+.quick-app input[type=checkbox] {
+  width: auto;
 }
 .quick-app button {
   border: none;
@@ -1377,7 +1409,7 @@ footer .footer_bottom-links a:hover {
   margin-top: 40px;
 }
 .equipment .equipment_highlights .column {
-  padding: 0 25px;
+  padding: 0 1.25em;
   border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 .equipment .equipment_highlights .column:last-child {

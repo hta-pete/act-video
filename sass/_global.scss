@@ -6,9 +6,6 @@ body{
 	color:$blue;
 	min-width:960px;
 }
-main{
-	//padding-top:110px;
-}
 // ——————————————————————————
 // HEADER
 // ——————————————————————————
@@ -181,6 +178,7 @@ footer{
 	font-weight:700;
 	letter-spacing:-0.04em;
 	text-transform:uppercase;
+	border-radius:2px;
 	i{
 		font-size:1em;
 		margin-left:0.4em;
@@ -307,7 +305,7 @@ footer{
 		margin-bottom:10px;
 	}
 	.flex{
-		gap:15px;
+		gap:10px;
 	}
 	.fields{
 		margin-top:15px;
@@ -327,14 +325,46 @@ footer{
 	p{
 		font-size:1.4rem;
 	}
+	.select{
+		position:relative;
+		width:100%;
+		&:after{
+			content: "\f078";
+			font-family: "FontAwesome";
+			font-size: 10px;
+			color: $gray;
+			right: 15px;
+			top: 18px;
+			position: absolute;
+			pointer-events: none;
+		}
+		select{
+			display:block;
+			width:100%;
+			font-size:1.4rem;
+			padding:1em 1em;
+			border-radius:3px;
+			border:1px solid rgba(75,85,120,0.3);
+			background:transparent;
+			color:$gray;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+		}
+
+	}
 	input{
 		display:block;
 		width:100%;
 		font-size:1.4rem;
-		padding:1em 1.2em;
+		padding:0.8em 1em;
 		border-radius:3px;
 		border:1px solid rgba(75,85,120,0.3);
 		background:transparent;
+		color:$blue;
+	}
+	input[type="checkbox"]{
+		width:auto;
 	}
 	button{
 		border:none;
