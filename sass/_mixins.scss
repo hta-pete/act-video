@@ -40,16 +40,13 @@
 }
 
 @mixin placeholder-color($color){
-  &.placeholder{
+  ::-webkit-input-placeholder{
     color: $color
   }
-  &:-moz-placeholder{
-    color: $color
-  }  
-  &::-webkit-input-placeholder{
+  :-ms-input-placeholder{
     color: $color
   }
-  &:-ms-input-placeholder{
+  ::placeholder{
     color: $color
   }
 }

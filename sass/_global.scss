@@ -19,65 +19,21 @@ header{
 	width:100%;
 	min-width:960px;
 	height:60px;
-	//background:$blue;
 	overflow:hidden;
 	@include transition(height 0.6s $easeOutExpo);
-	&.active{
-		//position:fixed;
-		//top:-41px;
-		//height:100px;
-		//.main-nav{
-		//	a{
-		//		height:60px;
-		//	}
-		//	#logo{
-		//		width:64px;
-		//		height:auto;
-		//	}
-		//}
-	}
-	.top-nav{
-		display:none;
-		height:40px;
-		width:100%;
-		background:white;
-		.container_sm{
-			display:flex;
-		  justify-content: flex-end;
-		}
-		li{
-			display:inline-block;
-			padding:0 15px;
-			font-size:1.2rem;
-			font-weight:700;
-			border-right:1px solid #ddd;
-			&:last-child{
-				padding-right:0;
-				border-right:none;
-			}
-			i{
-				font-size:1.1rem;
-				margin-right:0.6em;
-				@include opacity(0.6);
-			}
-		}
-	}
 	.main-nav{
 		.logo-header{
 			padding-top:13px;
 		}
-		a{
-			display:flex;
-			height:60px;
-			align-items:center;
-			font-size:1.6rem;
-			font-weight:700;
-			letter-spacing:-0.03em;
-			color:white;
-			padding:0 2.4rem;
-			@include transition(all 0.4s $easeOutExpo);
-			&:hover{
-				background:rgba(255,255,255,0.1);
+		.main-nav_left{
+			a{
+				display:flex;
+				align-items:center;
+				font-size:1.6rem;
+				font-weight:700;
+				letter-spacing:-0.03em;
+				color:white;
+				margin:0 2.4rem;
 			}
 		}
 		nav{
@@ -89,6 +45,7 @@ header{
 			i{
 				font-size:1.5rem;
 				margin-left:0.6em;
+				margin-top:0.2em;
 				vertical-align:top;
 			}
 		}
@@ -99,11 +56,19 @@ header{
 	.main-nav_right{
 		height:100%;
 	}
+	.apply-phone{
+		a{
+			font-size:1.6rem;
+			font-weight:700;
+			letter-spacing:-0.03em;
+			color:white;
+			margin-right:2.4rem;
+		}
+	}
 	.apply-header{
-		position:sticky;
-		top:0;
 		a{
 			background:$orange;
+			font-size:1.6rem;
 			letter-spacing:-0.03em;
 			&:hover{
 				background:darken($orange,6%);
@@ -218,13 +183,11 @@ footer{
 	text-transform:uppercase;
 	i{
 		font-size:1em;
-		vertical-align:middle;
-		margin-top:-0.08em;
 		margin-left:0.4em;
 		&.fa-play{
 			font-size:0.7em;
-			margin-top:-0.2em;
 		  margin-left:0.5em;
+			vertical-align:1px;
 		}
 	}
 	@include transition(all 0.8s $easeOutExpo);
@@ -236,6 +199,8 @@ footer{
 .button-group{
 	.btn{
 		margin:0 0.5rem 0 0;
+		padding:1em 1em 0.9em 1em;
+		width:140px;
 		&:last-child{
 			margin:0;
 		}
@@ -375,7 +340,9 @@ footer{
 		border:none;
 		-webkit-appearance:none;
 		padding:1em 1.2em;
+		width:140px;
 	}
+	@include placeholder-color($gray);
 }
 
 

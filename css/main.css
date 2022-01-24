@@ -107,12 +107,12 @@ FONT STYLES
 }
 
 .heading_sm {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   letter-spacing: -0.02em;
 }
 
 .heading_xs {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   letter-spacing: -0.02em;
 }
 
@@ -125,7 +125,7 @@ li {
 }
 
 .--gray {
-  color: #616b7b;
+  color: #626b7c;
 }
 
 .--white {
@@ -607,7 +607,7 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1;
-  color: #163b75;
+  color: #1d4485;
   min-width: 960px;
 }
 
@@ -625,53 +625,17 @@ header {
   -o-transition: height 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   transition: height 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
-header .top-nav {
-  display: none;
-  height: 40px;
-  width: 100%;
-  background: white;
-}
-header .top-nav .container_sm {
-  display: flex;
-  justify-content: flex-end;
-}
-header .top-nav li {
-  display: inline-block;
-  padding: 0 15px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  border-right: 1px solid #ddd;
-}
-header .top-nav li:last-child {
-  padding-right: 0;
-  border-right: none;
-}
-header .top-nav li i {
-  font-size: 1.1rem;
-  margin-right: 0.6em;
-  opacity: 0.6;
-  filter: alpha(opacity=60);
-}
 header .main-nav .logo-header {
   padding-top: 13px;
 }
-header .main-nav a {
+header .main-nav .main-nav_left a {
   display: flex;
-  height: 60px;
   align-items: center;
   font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: -0.03em;
   color: white;
-  padding: 0 2.4rem;
-  -webkit-transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-  -moz-transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-  -ms-transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-  -o-transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-}
-header .main-nav a:hover {
-  background: rgba(255, 255, 255, 0.1);
+  margin: 0 2.4rem;
 }
 header .main-nav nav {
   margin-left: 1.2em;
@@ -683,6 +647,7 @@ header .main-nav nav .nav-link {
 header .main-nav nav i {
   font-size: 1.5rem;
   margin-left: 0.6em;
+  margin-top: 0.2em;
   vertical-align: top;
 }
 header .main-nav_left {
@@ -691,12 +656,16 @@ header .main-nav_left {
 header .main-nav_right {
   height: 100%;
 }
-header .apply-header {
-  position: sticky;
-  top: 0;
+header .apply-phone a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: white;
+  margin-right: 2.4rem;
 }
 header .apply-header a {
   background: #fe8021;
+  font-size: 1.6rem;
   letter-spacing: -0.03em;
 }
 header .apply-header a:hover {
@@ -705,7 +674,7 @@ header .apply-header a:hover {
 
 footer {
   padding: 170px 0 90px 0;
-  background: #f9f8f6;
+  background: #f5f4f0;
 }
 footer .column {
   width: auto;
@@ -719,7 +688,7 @@ footer .search-box {
 footer .search-box i {
   position: absolute;
   font-size: 1.4rem;
-  color: #616b7b;
+  color: #626b7c;
   top: 0.94em;
   left: 1em;
 }
@@ -731,7 +700,7 @@ footer .search-box input {
   font-family: "Open sans", sans-serif;
   font-weight: 500;
   letter-spacing: -0.05em;
-  color: #616b7b;
+  color: #626b7c;
   border: 1px solid rgba(75, 85, 120, 0.3);
   border-radius: 3px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0);
@@ -761,10 +730,10 @@ footer .footer_menu-heading {
   margin-bottom: 10px;
 }
 footer .footer_menu a {
-  color: #616b7b;
+  color: #626b7c;
 }
 footer .footer_menu a:hover {
-  color: #163b75;
+  color: #1d4485;
   text-decoration: underline;
 }
 footer .footer_menu i {
@@ -784,10 +753,10 @@ footer .footer_bottom {
   font-size: 15px;
 }
 footer .footer_bottom-copyright {
-  color: #616b7b;
+  color: #626b7c;
 }
 footer .footer_bottom-links a {
-  color: #616b7b;
+  color: #626b7c;
   margin-left: 30px;
 }
 footer .footer_bottom-links a:hover {
@@ -810,14 +779,12 @@ footer .footer_bottom-links a:hover {
 }
 .btn i {
   font-size: 1em;
-  vertical-align: middle;
-  margin-top: -0.08em;
   margin-left: 0.4em;
 }
 .btn i.fa-play {
   font-size: 0.7em;
-  margin-top: -0.2em;
   margin-left: 0.5em;
+  vertical-align: 1px;
 }
 .btn:hover {
   z-index: 1;
@@ -826,6 +793,8 @@ footer .footer_bottom-links a:hover {
 
 .button-group .btn {
   margin: 0 0.5rem 0 0;
+  padding: 1em 1em 0.9em 1em;
+  width: 140px;
 }
 .button-group .btn:last-child {
   margin: 0;
@@ -841,7 +810,7 @@ footer .footer_bottom-links a:hover {
 
 .primary-btn {
   background: white;
-  color: #163b75;
+  color: #1d4485;
 }
 .primary-btn.--border {
   border: 1px solid rgba(75, 85, 120, 0.3);
@@ -976,12 +945,22 @@ footer .footer_bottom-links a:hover {
   border: none;
   -webkit-appearance: none;
   padding: 1em 1.2em;
+  width: 140px;
+}
+.quick-app ::-webkit-input-placeholder {
+  color: #626b7c;
+}
+.quick-app :-ms-input-placeholder {
+  color: #626b7c;
+}
+.quick-app ::placeholder {
+  color: #626b7c;
 }
 
 .hero {
   position: relative;
   color: white;
-  background: #163b75;
+  background: #1d4485;
   width: 100%;
   height: calc(100vh - 110px);
 }
@@ -1173,7 +1152,7 @@ footer .footer_bottom-links a:hover {
   margin-left: 40%;
   width: 60%;
   height: 100%;
-  background: #163b75;
+  background: #1d4485;
   overflow: hidden;
 }
 .hero .hero-video video, .hero .hero-video img {
@@ -1204,7 +1183,7 @@ footer .footer_bottom-links a:hover {
   left: 0;
   width: 85%;
   height: 100%;
-  background: linear-gradient(90deg, #163b75 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(90deg, #1d4485 0%, rgba(0, 0, 0, 0) 100%);
 }
 .hero .slick-dots {
   z-index: 4;
@@ -1277,7 +1256,7 @@ footer .footer_bottom-links a:hover {
 .quick-app-wrap {
   padding-right: 30px;
   padding-left: 30px;
-  background: #f6f6f6;
+  background: #f5f4f0;
 }
 
 .page-menu {
@@ -1291,10 +1270,16 @@ footer .footer_bottom-links a:hover {
   margin-bottom: 5px;
 }
 
+.benefits-driver-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .benefits {
   padding: 60px 0 120px 0;
   position: relative;
-  background: #163b75;
+  background: #1d4485;
   background-size: auto 100%;
   background-size: auto 100%;
   color: white;
@@ -1334,7 +1319,7 @@ footer .footer_bottom-links a:hover {
 }
 
 .apply-cta {
-  background: #163b75 url("../img/logos/act-logo-bg.png") no-repeat center;
+  background: #1d4485 url("../img/logos/act-logo-bg.png") no-repeat center;
   background-size: auto 170%;
   width: 100%;
   color: white;

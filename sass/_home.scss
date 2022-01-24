@@ -178,7 +178,7 @@
 .quick-app-wrap{
 	padding-right:30px;
 	padding-left:30px;
-	background:#f6f6f6;
+	background:$gray_light;
 }
 
 .page-menu{
@@ -198,6 +198,15 @@
 // ———————————————————————————————————
 // BENEFITS
 // ———————————————————————————————————
+.benefits-driver-image{
+	img{
+		display:block;
+		width:100%;
+		height: auto;
+	}
+
+}
+
 .benefits{
 	padding:60px 0 120px 0;
 	position:relative;
