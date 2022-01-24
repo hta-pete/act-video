@@ -1286,6 +1286,8 @@ footer .footer_bottom-links a:hover {
 }
 
 .quick-app-wrap {
+  padding-top: 70px;
+  padding-bottom: 70px;
   padding-right: 30px;
   padding-left: 30px;
   background: #f5f4f0;
