@@ -173,8 +173,6 @@
 }
 
 .quick-app-wrap{
-	padding-top:70px;
-	padding-bottom:70px;
 	padding-right:30px;
 	padding-left:30px;
 	background:$gray_light;
@@ -198,10 +196,17 @@
 // BENEFITS
 // ———————————————————————————————————
 .benefits-driver-image{
+	position:relative;
 	img{
 		display:block;
 		width:100%;
 		height: auto;
+	}
+	.benefits-driver_name{
+		position:absolute;
+		bottom:50px;
+		right:50px;
+		color:white;
 	}
 
 }

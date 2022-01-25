@@ -291,16 +291,25 @@ footer{
 
 
 .quick-app{
-	max-width:600px;
-	margin:10px auto;
-	padding:40px;
+	max-width:540px;
+	margin:0 auto;
 	background:white;
 	border-radius:6px;
-	box-shadow:0 2px 6px 0 rgba(0,0,0,0.2);
+	box-shadow:0 10px 30px 0 rgba(0,0,0,0.2);
+	overflow:hidden;
 	//color:white;
+	.form-header{
+		background:$blue;
+		padding:40px;
+		//border-bottom:1px solid rgba(75,85,120,0.3);
+	}
+	.form-body{
+		padding:40px;
+
+	}
 	label{
 		display:block;
-		font-weight:600;
+		font-weight:700;
 		font-size:12px;
 		margin-bottom:10px;
 	}
@@ -345,7 +354,7 @@ footer{
 			padding:1em 1em;
 			border-radius:3px;
 			border:1px solid rgba(75,85,120,0.3);
-			background:transparent;
+			background:$gray_light;
 			color:$gray;
 			-webkit-appearance: none;
 			-moz-appearance: none;
@@ -360,7 +369,7 @@ footer{
 		padding:0.8em 1em;
 		border-radius:3px;
 		border:1px solid rgba(75,85,120,0.3);
-		background:transparent;
+		background:$gray_light;
 		color:$blue;
 	}
 	input[type="checkbox"]{

@@ -899,16 +899,23 @@ footer .footer_bottom-links a:hover {
 }
 
 .quick-app {
-  max-width: 600px;
-  margin: 10px auto;
-  padding: 40px;
+  max-width: 540px;
+  margin: 0 auto;
   background: white;
   border-radius: 6px;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.quick-app .form-header {
+  background: #1d4485;
+  padding: 40px;
+}
+.quick-app .form-body {
+  padding: 40px;
 }
 .quick-app label {
   display: block;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 12px;
   margin-bottom: 10px;
 }
@@ -954,7 +961,7 @@ footer .footer_bottom-links a:hover {
   padding: 1em 1em;
   border-radius: 3px;
   border: 1px solid rgba(75, 85, 120, 0.3);
-  background: transparent;
+  background: #f5f4f0;
   color: #626b7c;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -967,7 +974,7 @@ footer .footer_bottom-links a:hover {
   padding: 0.8em 1em;
   border-radius: 3px;
   border: 1px solid rgba(75, 85, 120, 0.3);
-  background: transparent;
+  background: #f5f4f0;
   color: #1d4485;
 }
 .quick-app input[type=checkbox] {
@@ -1286,8 +1293,6 @@ footer .footer_bottom-links a:hover {
 }
 
 .quick-app-wrap {
-  padding-top: 70px;
-  padding-bottom: 70px;
   padding-right: 30px;
   padding-left: 30px;
   background: #f5f4f0;
@@ -1304,10 +1309,19 @@ footer .footer_bottom-links a:hover {
   margin-bottom: 5px;
 }
 
+.benefits-driver-image {
+  position: relative;
+}
 .benefits-driver-image img {
   display: block;
   width: 100%;
   height: auto;
+}
+.benefits-driver-image .benefits-driver_name {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  color: white;
 }
 
 .benefits {
