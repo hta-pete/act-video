@@ -1579,42 +1579,12 @@ footer .footer_bottom-links a:hover {
   padding: 120px 0;
   position: relative;
   background: #1d4485;
-  background-size: auto 100%;
-  background-size: auto 100%;
   color: white;
 }
-.benefits .benefit {
-  max-width: 400px;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-}
-.benefits .benefit:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: none;
-}
-.benefits .benefit p {
-  color: rgba(255, 255, 255, 0.8);
-}
-.benefits .benefit a {
-  font-style: italic;
-  color: white;
-  text-decoration: underline;
-  -webkit-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-  -moz-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-  -ms-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-  -o-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-}
-.benefits .benefit a:hover {
-  color: #fe8021;
-}
-.benefits .benefit img {
-  display: block;
-  width: 100%;
-  max-width: 220px;
-  margin-top: 5px;
+
+.qualifications {
+  padding: 120px 0;
+  position: relative;
 }
 
 .apply-cta {
