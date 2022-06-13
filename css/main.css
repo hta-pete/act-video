@@ -940,9 +940,9 @@ footer .footer_bottom-links a:hover {
   margin: 0 auto;
   margin-top: -120px;
   margin-left: auto;
-  background: white;
-  border-radius: 6px;
+  border-radius: 15px 0 0 0;
   box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 .quick-app .form-header {
   position: relative;
@@ -985,6 +985,7 @@ footer .footer_bottom-links a:hover {
 }
 .quick-app .form-body {
   padding: 50px;
+  background: white;
 }
 .quick-app label {
   display: block;
