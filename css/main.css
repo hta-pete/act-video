@@ -39,7 +39,7 @@ html {
 
 .--sticky {
   position: sticky;
-  top: 60px;
+  top: 0px;
 }
 
 /* ––––––––––––––––––––––––––––––––––––––––––––
@@ -67,13 +67,13 @@ FONT STYLES
 }
 
 .headline_lg {
-  font-size: 5rem;
+  font-size: 6rem;
   line-height: 1;
   letter-spacing: -0.04em;
 }
 
 .headline_md {
-  font-size: 3.2rem;
+  font-size: 4rem;
   line-height: 1.1;
   letter-spacing: -0.03em;
 }
@@ -92,7 +92,7 @@ FONT STYLES
 
 [class*=heading_] {
   display: block;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -124,6 +124,23 @@ li {
   display: block;
 }
 
+.bullets li {
+  position: relative;
+  display: block;
+  margin-bottom: 0.5em;
+  margin-left: 20px;
+}
+.bullets li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: -20px;
+  width: 10px;
+  height: 2px;
+  background: #fe8021;
+}
+
 .--gray {
   color: #626b7c;
 }
@@ -137,7 +154,7 @@ li {
 }
 
 .text-block {
-  max-width: 400px;
+  max-width: 480px;
 }
 .text-block .headline_lg {
   margin-left: -0.05em;
@@ -300,6 +317,14 @@ GRID
 
 .col-3 {
   flex: 1 1 30%;
+}
+
+.col-60 {
+  flex: 1 1 55%;
+}
+
+.col-40 {
+  flex: 1 1 45%;
 }
 
 /* ––––––––––––––––––––––––––––––––––––––––––––
@@ -608,7 +633,16 @@ body {
   font-size: 1.6rem;
   line-height: 1;
   color: #1d4485;
+  background: #f5f4f0;
   min-width: 960px;
+}
+
+main {
+  max-width: 1540px;
+  min-width: 960px;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.25);
 }
 
 header {
@@ -898,17 +932,23 @@ footer .footer_bottom-links a:hover {
   color: white;
 }
 
+.quick-app-wrap {
+  padding-left: 30px;
+}
+
 .quick-app {
-  max-width: 540px;
   margin: 0 auto;
+  margin-top: -120px;
+  margin-left: auto;
   background: white;
   border-radius: 6px;
   box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
 }
 .quick-app .form-header {
   position: relative;
+  padding: 0 50px;
+  height: 120px;
   background: #1d4485;
-  padding: 40px;
 }
 .quick-app .form-header_text {
   z-index: 2;
@@ -916,10 +956,15 @@ footer .footer_bottom-links a:hover {
 }
 .quick-app .form-header_image {
   z-index: 0;
+  display: flex;
+  justify-content: flex-end;
   position: absolute;
   top: 0;
   right: 0;
+  width: 100%;
   height: 100%;
+  background: #1d4485;
+  border-radius: 6px 6px 0 0;
   overflow: hidden;
 }
 .quick-app .form-header_image img {
@@ -939,7 +984,7 @@ footer .footer_bottom-links a:hover {
   margin-top: -30px;
 }
 .quick-app .form-body {
-  padding: 40px;
+  padding: 50px;
 }
 .quick-app label {
   display: block;
@@ -1022,6 +1067,169 @@ footer .footer_bottom-links a:hover {
 }
 .quick-app ::placeholder {
   color: #626b7c;
+}
+
+.career-hero {
+  z-index: 0;
+  position: relative;
+  color: white;
+  background: #1d4485;
+  width: 100%;
+  height: calc(80vh - 110px);
+  min-height: 450px;
+}
+.career-hero .hero-copy {
+  z-index: 4;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+.career-hero .hero-copy h1, .career-hero .hero-copy h2, .career-hero .hero-copy p, .career-hero .hero-copy .button-group, .career-hero .hero-copy img {
+  display: block;
+  will-change: transform;
+  opacity: 0 !important;
+}
+.career-hero .hero-copy h1:nth-child(1), .career-hero .hero-copy h2:nth-child(1), .career-hero .hero-copy p:nth-child(1), .career-hero .hero-copy .button-group:nth-child(1), .career-hero .hero-copy img:nth-child(1) {
+  -moz-transform: translateY(60px);
+  -o-transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  -webkit-transform: translateY(60px);
+  transform: translateY(60px);
+  -webkit-transition: transform 1.4s 0.01s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: transform 1.4s 0.01s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
+  -ms-transition: transform 1.4s 0.01s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: transform 1.4s 0.01s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.4s 0.01s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.career-hero .hero-copy h1:nth-child(2), .career-hero .hero-copy h2:nth-child(2), .career-hero .hero-copy p:nth-child(2), .career-hero .hero-copy .button-group:nth-child(2), .career-hero .hero-copy img:nth-child(2) {
+  -moz-transform: translateY(120px);
+  -o-transform: translateY(120px);
+  -ms-transform: translateY(120px);
+  -webkit-transform: translateY(120px);
+  transform: translateY(120px);
+  -webkit-transition: transform 1.4s 0.02s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.02s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: transform 1.4s 0.02s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.02s cubic-bezier(0.19, 1, 0.22, 1);
+  -ms-transition: transform 1.4s 0.02s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.02s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: transform 1.4s 0.02s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.02s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.4s 0.02s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.02s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.career-hero .hero-copy h1:nth-child(3), .career-hero .hero-copy h2:nth-child(3), .career-hero .hero-copy p:nth-child(3), .career-hero .hero-copy .button-group:nth-child(3), .career-hero .hero-copy img:nth-child(3) {
+  -moz-transform: translateY(180px);
+  -o-transform: translateY(180px);
+  -ms-transform: translateY(180px);
+  -webkit-transform: translateY(180px);
+  transform: translateY(180px);
+  -webkit-transition: transform 1.4s 0.03s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.03s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: transform 1.4s 0.03s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.03s cubic-bezier(0.19, 1, 0.22, 1);
+  -ms-transition: transform 1.4s 0.03s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.03s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: transform 1.4s 0.03s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.03s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.4s 0.03s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.03s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.career-hero .hero-copy h1:nth-child(4), .career-hero .hero-copy h2:nth-child(4), .career-hero .hero-copy p:nth-child(4), .career-hero .hero-copy .button-group:nth-child(4), .career-hero .hero-copy img:nth-child(4) {
+  -moz-transform: translateY(240px);
+  -o-transform: translateY(240px);
+  -ms-transform: translateY(240px);
+  -webkit-transform: translateY(240px);
+  transform: translateY(240px);
+  -webkit-transition: transform 1.4s 0.04s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.04s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: transform 1.4s 0.04s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.04s cubic-bezier(0.19, 1, 0.22, 1);
+  -ms-transition: transform 1.4s 0.04s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.04s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: transform 1.4s 0.04s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.04s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.4s 0.04s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.04s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.career-hero .hero-copy h1:nth-child(5), .career-hero .hero-copy h2:nth-child(5), .career-hero .hero-copy p:nth-child(5), .career-hero .hero-copy .button-group:nth-child(5), .career-hero .hero-copy img:nth-child(5) {
+  -moz-transform: translateY(300px);
+  -o-transform: translateY(300px);
+  -ms-transform: translateY(300px);
+  -webkit-transform: translateY(300px);
+  transform: translateY(300px);
+  -webkit-transition: transform 1.4s 0.05s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.05s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: transform 1.4s 0.05s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.05s cubic-bezier(0.19, 1, 0.22, 1);
+  -ms-transition: transform 1.4s 0.05s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.05s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: transform 1.4s 0.05s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.05s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.4s 0.05s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.05s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.career-hero .hero-copy h1:nth-child(6), .career-hero .hero-copy h2:nth-child(6), .career-hero .hero-copy p:nth-child(6), .career-hero .hero-copy .button-group:nth-child(6), .career-hero .hero-copy img:nth-child(6) {
+  -moz-transform: translateY(360px);
+  -o-transform: translateY(360px);
+  -ms-transform: translateY(360px);
+  -webkit-transform: translateY(360px);
+  transform: translateY(360px);
+  -webkit-transition: transform 1.4s 0.06s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.06s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: transform 1.4s 0.06s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.06s cubic-bezier(0.19, 1, 0.22, 1);
+  -ms-transition: transform 1.4s 0.06s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.06s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: transform 1.4s 0.06s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.06s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.4s 0.06s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.06s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.career-hero .hero-copy h1:nth-child(7), .career-hero .hero-copy h2:nth-child(7), .career-hero .hero-copy p:nth-child(7), .career-hero .hero-copy .button-group:nth-child(7), .career-hero .hero-copy img:nth-child(7) {
+  -moz-transform: translateY(420px);
+  -o-transform: translateY(420px);
+  -ms-transform: translateY(420px);
+  -webkit-transform: translateY(420px);
+  transform: translateY(420px);
+  -webkit-transition: transform 1.4s 0.07s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.07s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: transform 1.4s 0.07s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.07s cubic-bezier(0.19, 1, 0.22, 1);
+  -ms-transition: transform 1.4s 0.07s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.07s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: transform 1.4s 0.07s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.07s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.4s 0.07s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.07s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.career-hero .hero-copy h1:nth-child(8), .career-hero .hero-copy h2:nth-child(8), .career-hero .hero-copy p:nth-child(8), .career-hero .hero-copy .button-group:nth-child(8), .career-hero .hero-copy img:nth-child(8) {
+  -moz-transform: translateY(480px);
+  -o-transform: translateY(480px);
+  -ms-transform: translateY(480px);
+  -webkit-transform: translateY(480px);
+  transform: translateY(480px);
+  -webkit-transition: transform 1.4s 0.08s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.08s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: transform 1.4s 0.08s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.08s cubic-bezier(0.19, 1, 0.22, 1);
+  -ms-transition: transform 1.4s 0.08s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.08s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: transform 1.4s 0.08s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.08s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.4s 0.08s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.08s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.career-hero .hero-copy h1:nth-child(9), .career-hero .hero-copy h2:nth-child(9), .career-hero .hero-copy p:nth-child(9), .career-hero .hero-copy .button-group:nth-child(9), .career-hero .hero-copy img:nth-child(9) {
+  -moz-transform: translateY(540px);
+  -o-transform: translateY(540px);
+  -ms-transform: translateY(540px);
+  -webkit-transform: translateY(540px);
+  transform: translateY(540px);
+  -webkit-transition: transform 1.4s 0.09s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.09s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: transform 1.4s 0.09s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.09s cubic-bezier(0.19, 1, 0.22, 1);
+  -ms-transition: transform 1.4s 0.09s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.09s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: transform 1.4s 0.09s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.09s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.4s 0.09s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.09s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.career-hero .hero-copy h1:nth-child(10), .career-hero .hero-copy h2:nth-child(10), .career-hero .hero-copy p:nth-child(10), .career-hero .hero-copy .button-group:nth-child(10), .career-hero .hero-copy img:nth-child(10) {
+  -moz-transform: translateY(600px);
+  -o-transform: translateY(600px);
+  -ms-transform: translateY(600px);
+  -webkit-transform: translateY(600px);
+  transform: translateY(600px);
+  -webkit-transition: transform 1.4s 0.1s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.1s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: transform 1.4s 0.1s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.1s cubic-bezier(0.19, 1, 0.22, 1);
+  -ms-transition: transform 1.4s 0.1s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.1s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: transform 1.4s 0.1s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.1s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.4s 0.1s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.4s 0.1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.career-hero .hero-copy.active h1, .career-hero .hero-copy.active h2, .career-hero .hero-copy.active p, .career-hero .hero-copy.active .button-group, .career-hero .hero-copy.active img {
+  opacity: 1 !important;
+  -moz-transform: translateY(0);
+  -o-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.career-hero .hero-image {
+  height: 100%;
+}
+.career-hero .hero-image video, .career-hero .hero-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
 }
 
 .hero {
@@ -1317,18 +1525,32 @@ footer .footer_bottom-links a:hover {
 }
 
 .career-options {
+  z-index: 6;
   position: relative;
 }
 
-.quick-app-wrap {
-  padding-right: 30px;
-  padding-left: 30px;
-  background: #f5f4f0;
+.career-options_video-thumb {
+  max-width: 400px;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.35);
+}
+.career-options_video-thumb img {
+  display: block;
+}
+.career-options_video-thumb .video-play-btn {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 3px solid white;
+  border-radius: 100%;
+}
+.career-options_video-thumb .video-play-btn i {
+  color: white;
 }
 
-.page-menu {
-  padding: 120px 0 60px 0;
+.page-intro {
+  padding: 120px 0;
 }
+
 .page-menu .page-menu_wrap-links a {
   z-index: 0;
   position: relative;
@@ -1353,7 +1575,7 @@ footer .footer_bottom-links a:hover {
 }
 
 .benefits {
-  padding: 60px 0 120px 0;
+  padding: 120px 0;
   position: relative;
   background: #1d4485;
   background-size: auto 100%;
@@ -1495,6 +1717,40 @@ footer .footer_bottom-links a:hover {
   max-width: 550px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.page-hiring-area {
+  position: relative;
+  padding: 120px 0;
+  margin-top: -30px;
+}
+.page-hiring-area .text-block {
+  position: relative;
+  z-index: 1;
+  padding-right: 30px;
+}
+
+.hiring-content {
+  margin-top: -60px;
+}
+
+.page-hiring-area_bg {
+  z-index: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  top: -240px;
+  left: 0;
+}
+
+.page-hiring-area_map {
+  z-index: 1;
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin-left: -15%;
 }
 
 /*# sourceMappingURL=main.css.map */

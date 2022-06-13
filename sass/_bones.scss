@@ -36,7 +36,7 @@ html{
 
 .--sticky{
   position:sticky;
-  top:60px;
+  top:0px;
 
 }
 
@@ -65,12 +65,12 @@ FONT STYLES
   }
 }
 .headline_lg{
-  font-size:5rem;
+  font-size:6rem;
   line-height:1;
   letter-spacing:-0.04em;
 }
 .headline_md{
-  font-size:3.2rem;
+  font-size:4rem;
   line-height:1.1;
   letter-spacing:-0.03em;
 }
@@ -88,7 +88,7 @@ FONT STYLES
 //Headings
 [class*="heading_"] {
   display:block;
-  font-weight:600;
+  font-weight:700;
   text-transform: uppercase;
 }
 .heading_lg{
@@ -117,6 +117,22 @@ p, li{
 li{
   display:block;
 }
+.bullets li{
+  position:relative;
+  display:block;
+  margin-bottom:0.5em;
+  margin-left:20px;
+  &:before{
+    content:"";
+    display:block;
+    position:absolute;
+    top:12px;
+    left:-20px;
+    width:10px;
+    height:2px;
+    background:$orange;
+  }
+}
 
 .--gray{
   color:$gray;
@@ -130,7 +146,7 @@ li{
 
 
 .text-block{
-  max-width:400px;
+  max-width:480px;
   .headline_lg{
     margin-left:-0.05em;
   }
@@ -288,6 +304,13 @@ GRID
 }
 .col-3{
   flex:1 1 30%;
+}
+
+.col-60{
+  flex:1 1 55%;
+}
+.col-40{
+  flex:1 1 45%;
 }
 
 

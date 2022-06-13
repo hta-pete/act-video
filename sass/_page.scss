@@ -1,0 +1,32 @@
+.page-hiring-area{
+	position:relative;
+	padding:120px 0;
+	margin-top:-30px;
+	//background:$gray_light;
+	.text-block{
+		position:relative;
+		z-index:1;
+		padding-right:30px;
+	}
+}
+.hiring-content{
+	margin-top:-60px;
+}
+.page-hiring-area_bg{
+	z-index:0;
+	position:absolute;
+	display:block;
+	width:100%;
+	max-width:960px;
+	top:-240px;
+	left:0;
+}
+.page-hiring-area_map{
+	z-index:1;
+	position:relative;
+	display:block;
+	width:100%;
+	max-width:600px;
+	margin-left:-15%;
+
+}

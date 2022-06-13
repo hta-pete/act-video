@@ -47,7 +47,7 @@ $(function(){
   });
 
   $window.on("load", function(){
-    $('.slick-current .hero-copy').addClass('active');
+    $('.slick-current .hero-copy, .career-hero .hero-copy').addClass('active');
   });
   $('.slick-current .hero-copy').addClass('active');
 
