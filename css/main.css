@@ -1076,7 +1076,7 @@ footer .footer_bottom-links a:hover {
   color: white;
   background: #1d4485;
   width: 100%;
-  height: calc(80vh - 110px);
+  height: calc(90vh - 110px);
   min-height: 450px;
 }
 .career-hero .hero-copy {
