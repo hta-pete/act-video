@@ -1,12 +1,64 @@
+.career-options{
+	z-index:6;
+	position:relative;
+}
+.career-options_video-thumb{
+	z-index:1;
+	position:relative;
+	max-width:400px;
+	box-shadow:0 10px 30px 0 rgba(0,0,0,0.35);
+	img{
+		display:block;
+	}
+	.video-play-btn{
+		position:absolute;
+		width:60px;
+		height:60px;
+		border:3px solid white;
+		border-radius:100%;
+		i{
+			color:white;
+		}
+	}
+}
+.page-intro{
+	padding:120px 0;
+}
+
+
+.benefits-driver-image{
+	position:relative;
+	img{
+		display:block;
+		width:100%;
+		height: auto;
+	}
+	.benefits-driver_name{
+		position:absolute;
+		bottom:50px;
+		right:50px;
+		color:white;
+	}
+
+}
+.benefits{
+	padding:120px 0;
+	position:relative;
+	background:$blue;
+	color:white;
+}
+.qualifications{
+	padding:120px 0;
+	position:relative;
+}
+
 .page-hiring-area{
 	position:relative;
 	padding:120px 0;
 	margin-top:-30px;
-	//background:$gray_light;
 	.text-block{
 		position:relative;
 		z-index:1;
-		padding-right:30px;
 	}
 }
 .hiring-content{
@@ -26,7 +78,5 @@
 	position:relative;
 	display:block;
 	width:100%;
-	max-width:600px;
-	margin-left:-15%;
-
+	max-width:400px;
 }

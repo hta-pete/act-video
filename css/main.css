@@ -707,7 +707,7 @@ header .apply-header a:hover {
 }
 
 footer {
-  padding: 120px 0 90px 0;
+  padding: 120px 0 50px 0;
   background: #f5f4f0;
 }
 footer .column {
@@ -932,11 +932,9 @@ footer .footer_bottom-links a:hover {
   color: white;
 }
 
-.quick-app-wrap {
-  padding-left: 30px;
-}
-
 .quick-app {
+  height: 100vh;
+  min-height: 730px;
   margin: 0 auto;
   margin-top: -120px;
   margin-left: auto;
@@ -1498,7 +1496,7 @@ footer .footer_bottom-links a:hover {
   top: 50%;
   margin-top: -35px;
   height: 70px;
-  width: 30px;
+  width: 40px;
   background: rgba(10, 40, 90, 0.7);
   color: white;
   opacity: 0;
@@ -1525,66 +1523,12 @@ footer .footer_bottom-links a:hover {
   padding-left: 5px;
 }
 
-.career-options {
-  z-index: 6;
-  position: relative;
-}
-
-.career-options_video-thumb {
-  max-width: 400px;
-  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.35);
-}
-.career-options_video-thumb img {
-  display: block;
-}
-.career-options_video-thumb .video-play-btn {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  border: 3px solid white;
-  border-radius: 100%;
-}
-.career-options_video-thumb .video-play-btn i {
-  color: white;
-}
-
-.page-intro {
-  padding: 120px 0;
-}
-
 .page-menu .page-menu_wrap-links a {
   z-index: 0;
   position: relative;
   display: block;
   text-align: left;
   margin-bottom: 5px;
-}
-
-.benefits-driver-image {
-  position: relative;
-}
-.benefits-driver-image img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.benefits-driver-image .benefits-driver_name {
-  position: absolute;
-  bottom: 50px;
-  right: 50px;
-  color: white;
-}
-
-.benefits {
-  padding: 120px 0;
-  position: relative;
-  background: #1d4485;
-  color: white;
-}
-
-.qualifications {
-  padding: 120px 0;
-  position: relative;
 }
 
 .apply-cta {
@@ -1690,6 +1634,62 @@ footer .footer_bottom-links a:hover {
   margin-right: auto;
 }
 
+.career-options {
+  z-index: 6;
+  position: relative;
+}
+
+.career-options_video-thumb {
+  z-index: 1;
+  position: relative;
+  max-width: 400px;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.35);
+}
+.career-options_video-thumb img {
+  display: block;
+}
+.career-options_video-thumb .video-play-btn {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 3px solid white;
+  border-radius: 100%;
+}
+.career-options_video-thumb .video-play-btn i {
+  color: white;
+}
+
+.page-intro {
+  padding: 120px 0;
+}
+
+.benefits-driver-image {
+  position: relative;
+}
+.benefits-driver-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.benefits-driver-image .benefits-driver_name {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  color: white;
+}
+
+.benefits {
+  padding: 120px 0;
+  position: relative;
+  background: #1d4485;
+  color: white;
+}
+
+.qualifications {
+  padding: 120px 0;
+  position: relative;
+}
+
 .page-hiring-area {
   position: relative;
   padding: 120px 0;
@@ -1698,7 +1698,6 @@ footer .footer_bottom-links a:hover {
 .page-hiring-area .text-block {
   position: relative;
   z-index: 1;
-  padding-right: 30px;
 }
 
 .hiring-content {
@@ -1720,8 +1719,7 @@ footer .footer_bottom-links a:hover {
   position: relative;
   display: block;
   width: 100%;
-  max-width: 600px;
-  margin-left: -15%;
+  max-width: 400px;
 }
 
 /*# sourceMappingURL=main.css.map */

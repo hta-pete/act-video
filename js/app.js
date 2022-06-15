@@ -41,7 +41,7 @@ $(function(){
     pauseOnDotsHover: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    dots: true,
+    dots: false,
     prevArrow: $('.hero .prev-btn'),
     nextArrow: $('.hero .next-btn')
   });
