@@ -126,6 +126,25 @@ function hoverCardCircle(e){
 
 
 
+function actPlazaSlider(){
+        
+  $('.act-plaza-slides').slick({
+    autoplay:true,
+    autoplaySpeed:5000,
+    infinite:true,
+    dots:false,
+    slidesToShow:3,
+    slidesToScroll:1,
+    speed: 600,
+    prevArrow: false,
+    nextArrow: $('.act-plaza-next-btn'),
+  });
+
+}
+actPlazaSlider();
+
+
+
 
 
 
