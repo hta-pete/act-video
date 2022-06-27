@@ -56,7 +56,7 @@ FONT STYLES
   }
 }
 .headline_xl{
-  font-size:7rem;
+  font-size:10rem;
   letter-spacing:-0.05em;
   font-weight:800;
   .--light{
@@ -143,6 +143,12 @@ li{
 .--orange{
   color:$orange;
 }
+.--military-green{
+  color:$military_green;
+}
+.--military-green_bg{
+  background:$military_green !important;
+}
 
 
 .text-block{
@@ -178,9 +184,6 @@ a{
 strong{
   font-weight:700;
 }
-
-
-
 
 
 .lined{
@@ -226,7 +229,7 @@ GRID
 .container_xs{
   position:relative;
   width:100%;
-  max-width:800px;
+  max-width:700px;
   margin:0 auto;
   padding:0 2rem;
 }
@@ -291,7 +294,7 @@ GRID
   display:flex;
 }
 .row-gap{
-  gap:1.5rem;
+  gap:3rem;
   [class^="col--"],[class*=" col--"]{
     position:relative;
   }
@@ -467,9 +470,11 @@ UTILITY
   margin-top:15px;
 }
 .margin-top_10{
+  display:inline-block;
   margin-top:10px;
 }
 .margin-top_5{
+  display:inline-block;
   margin-top:5px;
 }
 

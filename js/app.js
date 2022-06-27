@@ -47,7 +47,7 @@ $(function(){
   });
 
   $window.on("load", function(){
-    $('.slick-current .hero-copy, .career-hero .hero-copy').addClass('active');
+    $('.slick-current .hero-copy').addClass('active');
   });
   $('.slick-current .hero-copy').addClass('active');
 
@@ -56,6 +56,16 @@ $(function(){
     $('.slick-current .hero-copy').addClass('active');
   });
 
+
+});
+
+
+$('.has-sub-menu > a').on("click", function(e){
+
+  e.preventDefault();
+
+  $(this).parent().siblings().find(".sub-menu").removeClass("active");
+  $(this).parent().find(".sub-menu").toggleClass("active");
 
 });
 
